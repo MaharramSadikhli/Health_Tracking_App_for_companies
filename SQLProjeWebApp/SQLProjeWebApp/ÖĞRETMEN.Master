@@ -1,0 +1,142 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ÖĞRETMEN.Master.cs" Inherits="SQLProjeWebApp.Site1" %>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>PERSONNEL HEALTH INFORMATION SYSTEM</title>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+         <!-- Bootstrap CSS CDN -->
+        <link href="Dosyalar1/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Our Custom CSS -->
+        <link href="Dosyalar1/StyleSheet2.css" rel="stylesheet" />
+    </head>
+    <body>
+
+
+
+
+        <div class="wrapper">
+
+
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>MENU SİDEBAR</h3>
+                    <strong>MENU</strong>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-home"></i>
+                            PERSONAL INFORMATION
+                        </a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="WebForm1.aspx#"><i class="glyphicon glyphicon-list"></i>PERSONNEL LİST</a></li>
+                            <li><a href="SearchPersonnel.aspx#"><i class="glyphicon glyphicon-search"></i>SEACH PERSONNEL</a></li>
+                            <li><a href="AddPersonnel.aspx#"><i class="glyphicon glyphicon-plus-sign"></i>ADD PERSONAL INFO</a></li>
+                            
+                        </ul>
+                    </li>
+                     <li class="active">
+
+                        <a href="#posSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-list"></i>
+                            PERSONNEL INFO
+                        </a>
+                        <ul class="collapse list-unstyled" id="posSubmenu">
+                            <li><a href="Personnel.aspx#"><i class="glyphicon glyphicon-eye-open"></i>  PERSONNELS</a></li>
+                            <li><a href="AddPerson.aspx"><i class="glyphicon glyphicon-plus-sign">  ADD PERSONNEL</i></a></li>
+                            <li><a href="Position.aspx"><i class="glyphicon glyphicon-user">  POSITIONS</i></a></li>
+                            <li><a href="UniList.aspx"><i class="glyphicon glyphicon-education"> UNI LIST </i></a></li>
+                            <li><a href="AddUni.aspx"><i class="glyphicon glyphicon-edit">  ADD UNI</i></a></li>
+                            
+                        </ul>
+
+                    </li>
+                    <li class=" alert-dismissible">
+                        
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-warning-sign"></i>
+                            ILLNESS INFORMATIONS
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="illnessPersonnel.aspx#"><i class="glyphicon glyphicon-eye-open">  SICK PERSONNELS</i></a></li>
+                             <li><a href="AddSickPersonnels.aspx#"><i class="glyphicon glyphicon-plus-sign">  ADD SICK PERSONNEL</i></a></li>
+                            <li><a href="Medicament.aspx"><i class="glyphicon glyphicon-list">  MEDİCAMENT LIST</i></a></li>
+                            <li><a href="AddMed.aspx"><i class="glyphicon glyphicon-pencil">  ADD NEW MEDICAMENT</i></a></li>
+                            <li><a href="illness.aspx"><i class="glyphicon glyphicon-signal">  ILLNESS NAMES</i></a></li>
+                            <li><a href="Addillness.aspx"><i class="glyphicon glyphicon-pencil">  ADD ILLNESS</i></a></li>
+                        </ul>
+                    </li>
+                    <li class="alert-dismissible">
+                        <a href="#CovSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-info-sign"></i>
+                            ABOUT COVİD-19
+                        </a>
+                        <ul class="collapse list-unstyled" id="CovSubmenu">
+                            <li><a href="CovidPerson.aspx"><i class="glyphicon glyphicon-warning-sign"> COVID PERSONNEL</i></a></li>
+                            <li><a href="AddCovPerson.aspx"><i class="glyphicon glyphicon-plus-sign"> ADD COVID PERSONNEL</i></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <li>
+                        <a href="Vaccine.aspx">
+                        
+                            <i class="glyphicon glyphicon-info-sign"></i>
+                            ABOUT VACCINE
+                        </a>
+                    
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-blackboard"></i>
+                            STATISTIC
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-paperclip"></i>
+                            ABOUT COMPANY
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-send"></i>
+                            CONTACT
+                        </a>
+                    </li>
+                </ul>
+
+               
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- jQuery CDN -->
+        <script src="Dosyalar1/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+        <script src="Dosyalar1/js-bootstrap.min.js"></script>
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+    </body>
+</html>
+
