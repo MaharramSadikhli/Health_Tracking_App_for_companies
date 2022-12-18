@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 namespace SQLProjeWebApp
+{
 
 
     public partial class Site1
